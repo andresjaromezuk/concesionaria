@@ -37,8 +37,8 @@ switch (accion ) {
     case "mostrarPosibles":
         let persona = {
             nombre: "Juan",
-            capacidadDePagoEnCuotas: parseInt(process.argv[4]),
-            capacidadDePagoTotal: parseInt(process.argv[5])
+            capacidadDePagoEnCuotas: parseInt(process.argv[3]),
+            capacidadDePagoTotal: parseInt(process.argv[4])
         }
 
         let mostrar = concesionaria.autosQuePuedeComprar(persona)
