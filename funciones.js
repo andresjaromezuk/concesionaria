@@ -19,7 +19,7 @@ let concesionaria = {
         let autos = this.autos
         let autoBuscado = null
         autos.forEach(function (auto) {
-            auto.patente === patente
+            if (auto.patente === patente)
                 autoBuscado = auto
             
         })
@@ -27,10 +27,12 @@ let concesionaria = {
     },
 
     venderAuto: function (patente){
+        let autos = this.autos
         let autoDisponible = this.buscarAuto(patente)
         autoDisponible.vendido = true 
+        //let newAuto = autoDisponible.vendido
+        //return {...autos, vendido: newAuto}
         return autoDisponible
-        
     },
 
     autosParaLaVenta: function (){
